@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: 9db55617a026f45458309f7059d86d18
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Player Punch 64x64_Frame_0
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.55172414}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 31
+      y: 70
+      width: 17
+      height: 29
+    spriteID: ac1d7ec09cbf8644093497569301c2cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 31, y: 70}
+  - name: Player Punch 64x64_Frame_1
+    originalName: 
+    pivot: {x: 0.75, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 35
+      width: 20
+      height: 27
+    spriteID: e06da0e9b3fe62844b72d8a6d54c92af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 35}
+  - name: Player Punch 64x64_Frame_2
+    originalName: 
+    pivot: {x: 0.75, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 35
+      width: 20
+      height: 27
+    spriteID: 5d005042c0462fe4db7705b9475077a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 35}
+  - name: Player Punch 64x64_Frame_3
+    originalName: 
+    pivot: {x: 0.7368421, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 19
+      height: 28
+    spriteID: 46b836714f8117e4f8380dcab7e84a62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  - name: Player Punch 64x64_Frame_4
+    originalName: 
+    pivot: {x: 0.2195122, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 41
+      height: 23
+    spriteID: 3bbe3206e05c5a741a485d5e56d36d0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Player Punch 64x64_Frame_5
+    originalName: 
+    pivot: {x: -0.03448276, y: -0.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 4
+      width: 29
+      height: 21
+    spriteID: 73bf8021713ad034d85e192400432ec7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 4}
+  - name: Player Punch 64x64_Frame_6
+    originalName: 
+    pivot: {x: -0.05, y: -0.64}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 35
+      width: 20
+      height: 25
+    spriteID: b42bae42a8bbd054393744451fe5cbd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 35}
+  - name: Player Punch 64x64_Frame_7
+    originalName: 
+    pivot: {x: 0.07692308, y: -0.55172414}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 70
+      width: 13
+      height: 29
+    spriteID: be9b8654d7dae57458ff1971e7cb346a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 70}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1673828113
+    name: Player Punch 64x64
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Player Punch 64x64_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 29
+      spriteId: ac1d7ec09cbf8644093497569301c2cc
+    - name: Player Punch 64x64_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 17
+        y: 16
+        width: 20
+        height: 27
+      spriteId: e06da0e9b3fe62844b72d8a6d54c92af
+    - name: Player Punch 64x64_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 17
+        y: 16
+        width: 20
+        height: 27
+      spriteId: 5d005042c0462fe4db7705b9475077a2
+    - name: Player Punch 64x64_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 18
+        y: 16
+        width: 19
+        height: 28
+      spriteId: 46b836714f8117e4f8380dcab7e84a62
+    - name: Player Punch 64x64_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 23
+        y: 16
+        width: 41
+        height: 23
+      spriteId: 3bbe3206e05c5a741a485d5e56d36d0b
+    - name: Player Punch 64x64_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 33
+        y: 16
+        width: 29
+        height: 21
+      spriteId: 73bf8021713ad034d85e192400432ec7
+    - name: Player Punch 64x64_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 33
+        y: 16
+        width: 20
+        height: 25
+      spriteId: b42bae42a8bbd054393744451fe5cbd3
+    - name: Player Punch 64x64_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 31
+        y: 16
+        width: 13
+        height: 29
+      spriteId: be9b8654d7dae57458ff1971e7cb346a
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
