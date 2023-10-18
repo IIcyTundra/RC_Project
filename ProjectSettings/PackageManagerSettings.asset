@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedSettingsExpanded: 1
   m_ScopedRegistriesSettingsExpanded: 1
   m_SeeAllPackageVersions: 0
-  m_DismissPreviewPackagesInUse: 1
+  m_DismissPreviewPackagesInUse: 0
   oneTimeWarningShown: 0
   m_Registries:
   - m_Id: main
@@ -34,6 +34,7 @@ MonoBehaviour:
     - com.littlebigfun.addressable-importer
     - com.openupm
     - se.hertzole.scriptable-values
+    - com.kitbashery.game-kit
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
@@ -43,5 +44,5 @@ MonoBehaviour:
     m_Modified: 0
     m_ErrorMessage: 
     m_UserModificationsInstanceId: -834
-    m_OriginalInstanceId: -836
+    m_OriginalInstanceId: -838
   m_LoadAssets: 0

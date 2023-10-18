@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.kitbashery.game-kit": {
+      "version": "1.1.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.littlebigfun.addressable-importer": {
       "version": "0.16.1",
       "depth": 0,

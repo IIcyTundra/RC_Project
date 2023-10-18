@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.kitbashery.game-kit": "1.1.1",
     "com.littlebigfun.addressable-importer": "0.16.1",
     "com.tonymax.nsprites": "https://github.com/Antoshidza/NSprites.git",
     "com.unity.collab-proxy": "2.0.4",
@@ -53,7 +54,8 @@
         "com.aurorapunks.scriptablevalues",
         "com.littlebigfun.addressable-importer",
         "com.openupm",
-        "se.hertzole.scriptable-values"
+        "se.hertzole.scriptable-values",
+        "com.kitbashery.game-kit"
       ]
     }
   ]
