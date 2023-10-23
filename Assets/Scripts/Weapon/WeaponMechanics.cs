@@ -59,8 +59,8 @@ public class WeaponMechanics : MonoBehaviour
 
             // Initiate Recoil
             transform.localPosition -= Vector3.forward * Random.Range(m_WeaponData.kickMinMax.x, m_WeaponData.kickMinMax.y);
-            recoilAngle += Random.Range(m_WeaponData.recoilAngleMinMax.x, m_WeaponData.recoilAngleMinMax.y);
-            recoilAngle = Mathf.Clamp(recoilAngle, 0, 30);
+            //recoilAngle += Random.Range(m_WeaponData.recoilAngleMinMax.x, m_WeaponData.recoilAngleMinMax.y);
+            //recoilAngle = Mathf.Clamp(recoilAngle, 0, 30);
 
 
 
