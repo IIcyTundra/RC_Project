@@ -7,44 +7,56 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    public float dashDuration;
-    public float dashDistance;
-    private float dashTime;
-    public float distanceBewteenImages;
+    public float dashForce = 10f;
+    public float dashCoolDown = 0.2f;
+    public float dashDuration = 0.5f;
+    
 
-    private bool isDashing = false;
     private Rigidbody2D rb;
+    private bool isDashing;
+    private bool canDash;
+    private Vector2 m_Movement;
     //private Vector3 lastImagePos;
     
 
     void Start()
     {
+        isDashing = false;
+        canDash = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical).normalized * moveSpeed;
+        m_Movement = new Vector2(moveHorizontal, moveVertical).normalized * moveSpeed;
 
-        rb.velocity = movement;
+        rb.velocity = m_Movement;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         { 
-            Dash(movement);
+            StartCoroutine(Dash());
         }
     }
 
-    void Dash(Vector2 movement)
-    {
-        if (Time.time >= dashTime)
-        {
-            dashTime = Time.time + dashDuration;
+   
 
-            rb.velocity = movement.normalized * dashDistance;
-        }
+    IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        rb.velocity = new Vector2(m_Movement.x * dashForce, m_Movement.y * dashForce);
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
     }
 
 
