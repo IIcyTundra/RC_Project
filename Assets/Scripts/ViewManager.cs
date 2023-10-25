@@ -1,17 +1,20 @@
+using Hertzole.ScriptableValues;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ViewManager: MonoBehaviour
 {
-    public void PlayScene(string sceneName)
+
+    public ScriptableString sceneName;
+    public void PlayScene()
     {
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(sceneName.Value, LoadSceneMode.Additive);
     }
 
-    public void UnloadScene(string sceneName)
+    public void UnloadScene()
     {
-        SceneManager.UnloadSceneAsync(sceneName);
+        SceneManager.UnloadSceneAsync(sceneName.Value);
     }
     public void QuitGame()
     {

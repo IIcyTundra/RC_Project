@@ -1,13 +1,15 @@
 using Kitbashery.Gameplay;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float dashSpeed = 10f;
-    public float dashDuration = 0.2f;
+    public float moveSpeed;
+    public float dashDuration;
+    public float dashDistance;
+    private float dashTime;
     public float distanceBewteenImages;
 
     private bool isDashing = false;
@@ -29,43 +31,22 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = movement;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
-        {
-            isDashing = true;
-            //ObjectPools.Instance.GetPooledObject(0);
-            //lastImagePos = transform.position;
-            StartCoroutine(Dash());
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        { 
+            Dash(movement);
         }
     }
 
-    IEnumerator Dash()
+    void Dash(Vector2 movement)
     {
-        float startTime = Time.time;
-
-        Vector2 dashDirection = rb.velocity.normalized;
-
-        if (dashDirection == Vector2.zero)
+        if (Time.time >= dashTime)
         {
-            dashDirection = transform.up;
+            dashTime = Time.time + dashDuration;
+
+            rb.velocity = movement.normalized * dashDistance;
         }
-
-        
-
-        while (Time.time < startTime + dashDuration)
-        {
-            rb.velocity = dashDirection * dashSpeed;
-
-            //if (Mathf.Abs(Vector3.Distance(transform.position, lastImagePos)) > distanceBewteenImages)
-            //{
-            //    ObjectPools.Instance.GetPooledObject("AfterImage");
-            //    lastImagePos = transform.position;
-            //}
-            yield return null;
-        }
-
-        
-
-        isDashing = false;
     }
+
+
 }
 
