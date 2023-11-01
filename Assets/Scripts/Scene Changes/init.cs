@@ -7,6 +7,6 @@ public class Init : MonoBehaviour
 {
     void Start()
     {
-        gameObject.GetComponent<ViewManager>().PlayScene();
+        gameObject.GetComponent<ViewManager>().PlayScene("MainMenu");
     }
 }

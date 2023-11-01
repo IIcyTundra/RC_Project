@@ -15,10 +15,11 @@ public class MenuOverlay : MonoBehaviour
             {
                 Resume();
             }
-            else
+            else if(!(GameIsPaused))
             {
                 Pause();
             }
+            
         }
     }
     public void Resume()
