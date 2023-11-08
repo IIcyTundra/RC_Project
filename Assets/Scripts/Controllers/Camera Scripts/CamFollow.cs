@@ -1,17 +1,35 @@
+using Hertzole.ScriptableValues;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamFollow : MonoBehaviour
+public class CamControls : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public float yOffset = 1f;
-    public Transform target;
+    [SerializeField] private ScriptableFloat CamZoom;
+    [SerializeField] private ScriptableFloat CamFollowSpeed;
+    [SerializeField] private ScriptableFloat CamOffset;
+    [SerializeField] private ScriptableFloat CamShakeIntensity;
+    [SerializeField] private ScriptableFloat CamShakeMagnitude;
+    [SerializeField] private Transform target;
 
-    // Update is called once per frame
+
+    private void Start()
+    {
+        Debug.Log(CamZoom.Value.ToString());
+        Debug.Log(CamFollowSpeed.Value.ToString());
+        Debug.Log(CamOffset.Value.ToString());
+        Debug.Log(CamShakeIntensity.Value.ToString());
+        Debug.Log(CamShakeMagnitude.Value.ToString());
+    }
     void Update()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+        if(target != null)
+            FollowTarget();
+    }
+
+    private void FollowTarget()
+    {
+        Vector3 newPos = new Vector3(target.position.x, target.position.y + CamOffset.Value, -10f);
+        transform.position = Vector3.Slerp(transform.position, newPos, CamFollowSpeed.Value * Time.deltaTime);
     }
 }

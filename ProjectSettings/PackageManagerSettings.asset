@@ -35,6 +35,8 @@ MonoBehaviour:
     - com.openupm
     - se.hertzole.scriptable-values
     - com.kitbashery.game-kit
+    - com.kitbashery.modular-ai
+    - com.blueraja.weighted-item-randomizer-for-c-sharp
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
