@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Spas-12
   m_EditorClassIdentifier: 
   MuzzleVelocity: 10
-  fireMode: 2
-  burstCount: 0
+  fireMode: 1
+  burstCount: 3
   RateOfFire: 10
   ProjectilesPerMag: 40
   reloadTime: 0.3
@@ -26,5 +26,5 @@ MonoBehaviour:
   ReloadAudio: []
   kickMinMax: {x: 0.05, y: 0.2}
   recoilAngleMinMax: {x: 3, y: 5}
-  recoilMoveSettleTime: 0.1
+  recoilMoveSettleTime: 0.04
   recoilRotationSettleTime: 0.1

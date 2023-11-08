@@ -10,17 +10,21 @@ public class PlayerController : MonoBehaviour
     public float dashForce = 10f;
     public float dashCoolDown = 0.2f;
     public float dashDuration = 0.5f;
-    
+
+    [SerializeField] private PlayerInputEvents m_PlayerInput;
 
     private Rigidbody2D rb;
     private bool isDashing;
     private bool canDash;
     private Vector2 m_Movement;
     //private Vector3 lastImagePos;
-    
 
     void Start()
     {
+
+        m_PlayerInput.MoveEvent += MoveInput;
+        m_PlayerInput.DashEvent += DashInput;
+
         isDashing = false;
         canDash = true;
         rb = GetComponent<Rigidbody2D>();
@@ -33,17 +37,20 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        m_Movement = new Vector2(moveHorizontal, moveVertical).normalized * moveSpeed;
-
         rb.velocity = m_Movement;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        { 
+        
+    }
+
+    private void DashInput()
+    {
+        if(canDash)
             StartCoroutine(Dash());
-        }
+    }
+
+    private void MoveInput(Vector2 dir)
+    {
+        m_Movement = new Vector2(dir.x, dir.y) * moveSpeed;
     }
 
    

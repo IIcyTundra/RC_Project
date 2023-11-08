@@ -15,4 +15,4 @@ public class ConstantWeightGen : WeightGenerator
     public void Choose(int choice) { }
 
     public void Reset() { }
-}\
+}

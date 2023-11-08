@@ -19,8 +19,8 @@ public class WeaponManager : MonoBehaviour
 
     public Camera m_playerCam;
 
-    public static Action ShootInputDown;
-    public static Action ShootInputUp;
+    
+
 
     private void Start()
     {
@@ -33,15 +33,6 @@ public class WeaponManager : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            ShootInputDown?.Invoke();
-        }
-
-        if(Input.GetMouseButtonUp(0)) 
-        {
-            ShootInputUp?.Invoke();
-        }
         SwapCurrentWeapon();
         WeaponAiming();
 

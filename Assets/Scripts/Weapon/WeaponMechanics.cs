@@ -8,7 +8,7 @@ public class WeaponMechanics : MonoBehaviour
 {
     [SerializeField] private WeaponData m_WeaponData;
     [SerializeField] private Transform[] WeaponMuzzles;
-    
+    [SerializeField] private PlayerInputEvents m_PlayerInput;
 
     private float timeBetweenShots;
     private float nextShotTime;
@@ -17,17 +17,14 @@ public class WeaponMechanics : MonoBehaviour
     private int shotsRemainingInBurst;
     private int projectilesRemainingInMag;
 
-    
-
     bool isReloading;
 
     AudioSource source;
 
     private void Start()
     {
-        WeaponManager.ShootInputDown += OnTriggerHeld;
-        WeaponManager.ShootInputUp += OnTriggerReleased;
-
+        m_PlayerInput.PrimaryFirePressedEvent += OnTriggerHeld;
+        m_PlayerInput.PrimaryFireReleasedEvent += OnTriggerReleased;
 
         nextShotTime = Time.time;
         shotsRemainingInBurst = m_WeaponData.burstCount;
