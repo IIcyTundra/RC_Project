@@ -5,12 +5,17 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    //Gun Settings
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefabs;
+
+    //States of Enemy
     public GameObject player;
     public float speed;
     public float followRadius;
     public float attackRadius;
 
-    public float distance;
+    public float distance = 0;
     void Start()
     {
         
@@ -28,9 +33,10 @@ public class EnemyAi : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+
             if(distance < attackRadius)
             {
-
+               
             }
         }
     }
