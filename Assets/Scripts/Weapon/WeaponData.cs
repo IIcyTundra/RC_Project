@@ -8,6 +8,14 @@ public enum FireMode
     Automatic
 }
 
+public enum AmmoType
+{
+    Light,
+    Heavy,
+    Special
+}
+
+
 [CreateAssetMenu(fileName = "WeaponData", menuName = "Weapon System/Weapon Data")]
 public class WeaponData : ScriptableObject
 {
@@ -15,20 +23,23 @@ public class WeaponData : ScriptableObject
     [Header("Stats")]
     public float MuzzleVelocity;
     public FireMode fireMode = FireMode.Single;
-    public int burstCount;
-    public float RateOfFire; //rounds per second
+    public int burstCount = 1;
+    public float RateOfFire;
     public int ProjectilesPerMag;
+    public int AmmoCapacity;
     public float reloadTime = 0.3f;
     public float WeaponRange;
+    public AmmoType ammoType;
 
     [Header("Projectile")]
-    public float ProjectileSpeed;
+    public GameObject BulletPrefab;
+    [Header("MuzzleFlash")]
+    public GameObject FlashPrefab;
 
     [Header("Effects")]
-    public Transform shell;
-    public Transform shellEjection;
     public AudioClip[] ShootAudio;
-    public AudioClip[] ReloadAudio;
+    public AudioClip EmptyMagAudio;
+    public AudioClip ReloadAudio;
 
     [Header("Recoil")]
     public Vector2 kickMinMax = new Vector2(.05f, .2f);

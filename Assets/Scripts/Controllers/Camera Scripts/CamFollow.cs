@@ -15,11 +15,7 @@ public class CamControls : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(CamZoom.Value.ToString());
-        Debug.Log(CamFollowSpeed.Value.ToString());
-        Debug.Log(CamOffset.Value.ToString());
-        Debug.Log(CamShakeIntensity.Value.ToString());
-        Debug.Log(CamShakeMagnitude.Value.ToString());
+        transform.position = target.position;
     }
     void Update()
     {

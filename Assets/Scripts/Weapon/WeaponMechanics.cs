@@ -1,52 +1,78 @@
+using Hertzole.ScriptableValues;
 using Kitbashery.Gameplay;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WeaponMechanics : MonoBehaviour
 {
     [SerializeField] private WeaponData m_WeaponData;
     [SerializeField] private Transform[] WeaponMuzzles;
+    [SerializeField] private ScriptableStringEvent onAmmoChanged;
+    [SerializeField] private ScriptableIntEvent onAmmoGrabbed;
+
     [SerializeField] private PlayerInputEvents m_PlayerInput;
 
     private float timeBetweenShots;
-    private float nextShotTime;
-    private float timeSinceLastShot;
-    private bool triggerReleasedSinceLastShot;
-    private int shotsRemainingInBurst;
-    private int projectilesRemainingInMag;
 
-    bool isReloading;
+    Vector3 recoilSmoothDampVelocity;
+    float recoilRotSmoothDampVelocity;
+    float recoilAngle;
+
+
+    float nextShotTime;
+    bool triggerReleasedSinceLastShot;
+    int shotsRemainingInBurst;
+    int projectilesRemainingInMag;
+    int currentAmmoTotal;
+
+    public bool isShooting;
 
     AudioSource source;
+    private bool isReloading;
+
+    private void OnEnable()
+    {
+        m_PlayerInput.PrimaryFirePressedEvent += OnTriggerHold;
+        m_PlayerInput.PrimaryFireReleasedEvent += OnTriggerReleased;
+
+        onAmmoChanged.Invoke(this, $"{projectilesRemainingInMag} | {m_WeaponData.AmmoCapacity}");
+        onAmmoGrabbed.OnInvoked += OnAmmoPickup;
+
+    }
+
+
+
+    private void OnDisable()
+    {
+        m_PlayerInput.PrimaryFirePressedEvent -= OnTriggerHold;
+        m_PlayerInput.PrimaryFireReleasedEvent -= OnTriggerReleased;
+
+        onAmmoGrabbed.OnInvoked -= OnAmmoPickup;
+
+    }
+
 
     private void Start()
     {
-        m_PlayerInput.PrimaryFirePressedEvent += OnTriggerHeld;
-        m_PlayerInput.PrimaryFireReleasedEvent += OnTriggerReleased;
-
+        currentAmmoTotal = m_WeaponData.AmmoCapacity;
         nextShotTime = Time.time;
         shotsRemainingInBurst = m_WeaponData.burstCount;
         projectilesRemainingInMag = m_WeaponData.ProjectilesPerMag;
-        source = GetComponent<AudioSource>();
+        source = GetComponentInParent<AudioSource>();
         timeBetweenShots = 1.0f / m_WeaponData.RateOfFire;
     }
 
-    private void Update()
-    {
-        timeSinceLastShot += Time.deltaTime;
-    }
+    private bool CanShoot() => (!isReloading && Time.time >= nextShotTime && projectilesRemainingInMag > 0);
 
-    private bool CanShoot() =>  timeSinceLastShot > 1f / (m_WeaponData.RateOfFire / 60f);
-
-    private void Shoot()
+    public void Shoot()
     {
         if (CanShoot())
         {
             // Firemodes
             if (m_WeaponData.fireMode == FireMode.Burst)
             {
+
                 if (shotsRemainingInBurst == 0)
                 {
                     return;
@@ -61,38 +87,68 @@ public class WeaponMechanics : MonoBehaviour
 
             nextShotTime = Time.time + timeBetweenShots;
             // Spawn projectiles
-            SpawnBullet();
+            SpawnProjectile();
 
 
-            //source.PlayOneShot(m_WeaponData.ShootAudio[Random.Range(0, m_WeaponData.ShootAudio.Length)], 1);
+
+            int j = Random.Range(0, m_WeaponData.ShootAudio.Length);
+            source.PlayOneShot(m_WeaponData.ShootAudio?[j]);
+
+            projectilesRemainingInMag--;
+
+            onAmmoChanged.Invoke(this, $"{projectilesRemainingInMag} | {currentAmmoTotal}");
+
+
         }
+
     }
 
-    private void SpawnBullet()
-    {
-        GameObject bullet = ObjectPools.Instance.GetPooledObject(0);
-        for (int i = 0; i < WeaponMuzzles.Length; i++)
-        {
-            bullet.transform.SetPositionAndRotation(WeaponMuzzles[i].position, WeaponMuzzles[i].rotation);
-            bullet.SetActive(true);
 
-            if (bullet.GetComponent<Bullet>())
+    private void SpawnProjectile()
+    {
+        foreach (Transform muzzle in WeaponMuzzles)
+        {
+            GameObject bullet = ObjectPools.Instance.GetPooledObject(m_WeaponData.BulletPrefab.name);
+            if (bullet.activeSelf != true)
             {
-                bullet.GetComponent<Bullet>().rigid.AddForce(WeaponMuzzles[i].right * m_WeaponData.ProjectileSpeed, ForceMode2D.Impulse);
+                bullet.transform.SetPositionAndRotation(muzzle.position, muzzle.rotation);
+
+                bullet.SetActive(true);
+
+                bullet.transform.forward = muzzle.forward;
             }
         }
+    }
+
+
+
+    private void OnAmmoPickup(object sender, int e)
+    {
+
+        if ((currentAmmoTotal += e) > m_WeaponData.AmmoCapacity)
+        {
+            currentAmmoTotal = m_WeaponData.AmmoCapacity;
+        }
+        else
+        {
+            currentAmmoTotal += e;
+        }
+
 
     }
 
-    private void OnTriggerHeld()
+    public void OnTriggerHold()
     {
         Shoot();
         triggerReleasedSinceLastShot = false;
     }
-    private void OnTriggerReleased()
+
+    public void OnTriggerReleased()
     {
         triggerReleasedSinceLastShot = true;
         shotsRemainingInBurst = m_WeaponData.burstCount;
+        isShooting = false;
     }
-
 }
+
+

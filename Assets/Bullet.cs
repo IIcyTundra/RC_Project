@@ -1,22 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
 using Kitbashery.Gameplay;
+using System.Collections;
+using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class Bullet : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+public class BulletMechanics : MonoBehaviour
 {
-
-
     [Header("Projectile:")]
-    public Rigidbody2D rigid;
-
-    [Space]
-    [Tooltip("Should force be applied to the hit rigidbody?")]
-    public bool applyForceOnImpact = true;
-    [Tooltip("Force applied to the rigidbody of hit colliders.")]
-    public float impactForce = 1f;
+    public Rigidbody rigid;
     [Tooltip("Initial velocity of the rigidbody.")]
     public float velocity = 500f;
 
@@ -31,27 +21,23 @@ public class Bullet : MonoBehaviour
     private float life = 0f;
 
 
-
-
     private void Awake()
     {
-
         if (rigid == null)
         {
-            rigid = gameObject.GetComponent<Rigidbody2D>();
+            rigid = gameObject.GetComponent<Rigidbody>();
         }
     }
 
-
     private void OnEnable()
     {
-        rigid.velocity = Vector2.zero;
-        rigid.AddForce(transform.forward * velocity, ForceMode2D.Impulse);
+        rigid.velocity = Vector3.zero;
+        rigid.AddForce(transform.forward * velocity, ForceMode.Impulse);
     }
 
     private void OnDisable()
     {
-        transform.position = Vector2.zero;
+        transform.position = Vector3.zero;
         transform.rotation = Quaternion.identity;
         life = 0;
     }
@@ -68,11 +54,9 @@ public class Bullet : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.SetActive(false);
     }
-
 
 }

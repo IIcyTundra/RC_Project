@@ -11,34 +11,41 @@ public enum ItemRarity
     legendary
 }
 
-
 [System.Serializable]
-public class Item
+public abstract class Item
 {
-    public string Name;
-    public float StatIncrease;
-    public ItemRarity ItemRarity;
+    public string ItenName;
+    public Sprite ItemSprite;
+    [TextArea] public string Description;
+    public ItemRarity Rarity;
+    public int ItemWeight;
+    public int MaxStacks;
 
-    public Item (string name, float statIncrease, ItemRarity itemRarity)
+    public virtual void Update(PlayerInfo player, int stacks)
     {
-        Name = name;
-        StatIncrease = statIncrease;
-        ItemRarity = itemRarity;
+
+    }
+    public virtual void OnHit(PlayerInfo player, int stacks)
+    {
+
+    }
+
+}
+public class BoonOfLight : Item
+{
+    float internalCoolDown;
+    GameObject effect;
+
+    public override void Update(PlayerInfo player, int stacks)
+    {
+        internalCoolDown -= 1;
+
+        if(internalCoolDown <= 0)
+        {
+            if (effect == null) effect = (GameObject)Resources.Load("ItemEffects/HealingArea", typeof(GameObject));
+            internalCoolDown = 11 - stacks; 
+        }
     }
 }
 
-[CreateAssetMenu(menuName = "Player Item")]
-public class PlayerItemGenration : ScriptableObject
-{
-    public Item Item;
-    public PlayerStats pStats;
 
-    private void GenerateRandomPlayerItem()
-    {
-        Item.ItemRarity.Equals(Random.Range(0, 3));
-
-        
-
-        pStats.PickupRange.Value = 89;
-    }
-}

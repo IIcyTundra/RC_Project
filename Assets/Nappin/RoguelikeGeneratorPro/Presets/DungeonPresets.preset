@@ -1,0 +1,1282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DungeonPresets
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 4d4f4bc4e28a9ba41b5a5a814435cb8e,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: levelSize.x
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: levelSize.y
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tileSize
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: percentLevelToFill
+    value: 20.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: spawnCornerWalls
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: removeUnnaturalWalls
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: useSeed
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: generationSeed
+    value: 99
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerDestructionChance
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerSpawnChance
+    value: 39
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerRotationChance
+    value: 44
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerRotatesLeft
+    value: 8.080808
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerRotatesRight
+    value: 38.38384
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerRotatesBackwords
+    value: 53.535355
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pathMakerMaxDensity
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: chunkSpawnChance
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: chunkChance2x2
+    value: 95
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: chunkChance3x3
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: patternFloor
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseScaleFloor.x
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseScaleFloor.y
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseCutoffFloor
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: patternWall
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseScaleWall.x
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseScaleWall.y
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: noiseCutoffWall
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomFloorOverlayChance
+    value: 11
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallOverlayChance
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tabSelected
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: generation
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fillAllTiles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: drawCorners
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: drawEmptyTiles
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: emptyTileObj
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 0abe00723b8c9924d84bac8d64bb46e4,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: drawFloorOverlayPatternTiles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: patternFloorTileObj
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 5405b316c84821346905386f94936025,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: drawFloorOverlayRandomTiles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomFloorTileObj
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: db980dc39ccfeca4991158cbd2acec67,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: drawTilesOrientation
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_1
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 784b5904e780e9c4db1e47e54de960dc,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_2
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 21f364b94a8cf504eacf67ff6b4dda7c,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_3
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 2abc9d4f9268dd44db26c579eb8bfcd5,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_4
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: c17d406605822ff4984d902b9fc7a052,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_5
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3d473094b5bdaf34c8c6a4ffe93b951c,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_6
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: dbc0a78bfb5b9524ba81ef221867359e,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_7
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 41775ace7ad5f18438c6598455b00d1d,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_8
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3622ccb3a85568347a15300dbeeed174,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_9
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 62b72067963e1464285213081a418aa2,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_10
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 84ed8b68e0b255546a288bb910d23c97,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_11
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 5cd5eff660d8c85419997d0f8940f62f,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_12
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: cb2593464b1998340b74417e3d812f94,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_13
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 913850804285afe4d8e8924891a70906,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_14
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: e044b166f9df1984eb8acfe762a7483c,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_15
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3a02e07a0d3ae2841b85d856e6cf2d10,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C1
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C3
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C4
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C5
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C6
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C7
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C8
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C9
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C10
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C11
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C12
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C13
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C14
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C15
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C16
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C17
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C18
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C19
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C20
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C21
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C22
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C23
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C24
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C25
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C26
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C27
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C28
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C29
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C30
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorTileObj_C31
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_1
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: fa83e1b4309e2c44987eda84e4ab1bf7,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_2
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 2bb23d189337fdd4bba565cb1fbbe26e,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_3
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: db9e119f30b6dd84fac9c6031a5355e6,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_4
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 2f6336fc0c092814fb242131a59f219a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_5
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: e220b40b183c94d47937914a21340be9,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_6
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: f6b884f5e0ffc654a9d553857795305c,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_7
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 49e9f6d482f2e8945b59a67d4c94e169,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_8
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 22958d6b33ee1f54d9eec9adeaaa82b1,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_9
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: e8f818203a192a44b9ddc9a3d86c4e49,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_10
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3b8ff1c316589ec4bbb9c4a34d650521,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_11
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 5c215c23f4206ce4ba4bc7984fe7637f,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_12
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 6adb0f5080039074abed940deb7e46c5,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_13
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: f668ddc25520a714fb00b4ab5846bcca,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_14
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 02e3cf7995539f242b800d1f10447308,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_15
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: d5006f88ab0ee244289b2402dc229e19,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C1
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C3
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C4
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C5
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C6
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C7
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C8
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C9
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C10
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C11
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C12
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C13
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C14
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C15
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C16
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C17
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C18
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C19
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C20
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C21
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C22
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C23
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C24
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C25
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C26
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C27
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C28
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C29
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C30
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallTileObj_C31
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: drawWallOverlayPatternTiles
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_1
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 956098f284a2dd0408644ca3582c7272,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_2
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: d9cac247fafb76b4fa967abdd71dbf20,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_3
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: e2c2755176c009a49bb1cc023540e537,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_4
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: be7ce3fe8a71b05499b93ba36469771e,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_5
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 61fe12f27f6426547a4691f95fc08e2f,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_6
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 134054f62ce64c94a9ab1151b13ccd5d,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_7
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 301497099b2e3eb46b882fffa054610d,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_8
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: f6c5d38b71fc73b4bb1991a13cae9f98,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_9
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3596765734e45e04fa8c2c16763ba730,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_10
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: b87270f4fbdf9ef40babb3c475f5618d,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_11
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 96cae767f7ed57a4b8fd893aff8ddda0,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_12
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 09b0f515e207c2a47885ad6bef1b1b8a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_13
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: f28a341b6d8e64848b83b1d338a962b0,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_14
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: df794cc6ddbc6b74898749a021c291eb,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: patternWallTileObj_15
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: fbb58f6dee3aade4fab0c3b2d9c68633,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: drawWallOverlayRandomTiles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_1
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: b2f67e391891a9549bad98875daca6a6,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_2
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 8c0a59e128597114087f665659dbd441,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_3
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 20692d376dba8ef45944e6ace9d72a9e,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_4
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 0e5f4174babdc1d4b86538b4970f0938,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_5
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 5f12a402601c39546bc841dc8769cc2a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_6
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 8a5f3122c25cabe4bbd30b3335a02790,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_7
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 52bb3b05ce0d53c48b293990002c0a70,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_8
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 08d2d16185281194ebb1d2e06f5435af,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_9
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 3fb19e1439d4a634696e3eeccca1604d,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_10
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: cf1e8873840f349409f80fd60859fb30,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_11
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 8a74f7da97c69d14f9aa0061542d0a91,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_12
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 193479b68287c354eb2f9774e600656c,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_13
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: bd6c0d48c8e588d4facb149a40b0fd62,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_14
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: randomWallTileObj_15
+    value: 
+    objectReference: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: emptyTile
+    value: 
+    objectReference: {fileID: 11400000, guid: 60462d6a2498b7246883d7118422be56, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternFloorTile
+    value: 
+    objectReference: {fileID: 11400000, guid: bc53c28caaa8f1d42b1d7544844e8fc1, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomFloorTile
+    value: 
+    objectReference: {fileID: 11400000, guid: 57a121dda9b954a42878ba01f226c061, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_1
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_2
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_3
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_4
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_5
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_6
+    value: 
+    objectReference: {fileID: 11400000, guid: 2a39c3e798073884ab311bbc81dd2317, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_7
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_8
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_9
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_10
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_11
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_12
+    value: 
+    objectReference: {fileID: 11400000, guid: 2a39c3e798073884ab311bbc81dd2317, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_13
+    value: 
+    objectReference: {fileID: 11400000, guid: 2a39c3e798073884ab311bbc81dd2317, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_14
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_15
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C1
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C2
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C3
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C4
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C5
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C6
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C7
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C8
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C9
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C10
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C11
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C12
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C13
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C14
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C15
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C16
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C17
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C18
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C19
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C20
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C21
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C22
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C23
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C24
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C25
+    value: 
+    objectReference: {fileID: 11400000, guid: ddc42d46ba33e34448565baf5635aaf9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C26
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C27
+    value: 
+    objectReference: {fileID: 11400000, guid: 2a39c3e798073884ab311bbc81dd2317, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C28
+    value: 
+    objectReference: {fileID: 11400000, guid: 84abe7b2af4891c4f9081d0c79ec2937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C29
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C30
+    value: 
+    objectReference: {fileID: 11400000, guid: f9a21753b70f38d4a9412fadbd158313, type: 2}
+  - target: {fileID: 0}
+    propertyPath: floorTile_C31
+    value: 
+    objectReference: {fileID: 11400000, guid: dddc9dd81c04d0b41ad789898db55366, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_1
+    value: 
+    objectReference: {fileID: 11400000, guid: 60462d6a2498b7246883d7118422be56, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_2
+    value: 
+    objectReference: {fileID: 11400000, guid: d5d71a23896537149b6ee200d75815d2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_3
+    value: 
+    objectReference: {fileID: 11400000, guid: aa8b2ef7d682ecc4d9ea4767ad26020b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_4
+    value: 
+    objectReference: {fileID: 11400000, guid: 6080414f69320b44aa831760b12a9143, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_5
+    value: 
+    objectReference: {fileID: 11400000, guid: 864255968f40ef0479e08b0d01fb08ae, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_6
+    value: 
+    objectReference: {fileID: 11400000, guid: 2e0662ae2af9dfd4b896a525157be78a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_7
+    value: 
+    objectReference: {fileID: 11400000, guid: 32d9173145ed6d140a95c67d7baf8a4b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_8
+    value: 
+    objectReference: {fileID: 11400000, guid: f90da685783c6994dbe76e097be4d4a9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_9
+    value: 
+    objectReference: {fileID: 11400000, guid: 054a5d870dbefd64fb26f83abe6e5872, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_10
+    value: 
+    objectReference: {fileID: 11400000, guid: c6da7679111893b4b8885d96e3c288af, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_11
+    value: 
+    objectReference: {fileID: 11400000, guid: 16fe8472531b4c44c8f8adcc8c318b4a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_12
+    value: 
+    objectReference: {fileID: 11400000, guid: 3c37c528d93b48041a41649f3c23caef, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_13
+    value: 
+    objectReference: {fileID: 11400000, guid: bc9b4ca9d29216c4ba11dd1ca5200bc5, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_14
+    value: 
+    objectReference: {fileID: 11400000, guid: a5558390792576b4582b535e38c060e7, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_15
+    value: 
+    objectReference: {fileID: 11400000, guid: b796bdba22665b34bb95798499ce0155, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C1
+    value: 
+    objectReference: {fileID: 11400000, guid: 5a7056a0cc5ee4549a763e7188187bd2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C2
+    value: 
+    objectReference: {fileID: 11400000, guid: 73e46efada1d9bf4c9362880aa9a43c3, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C3
+    value: 
+    objectReference: {fileID: 11400000, guid: 1b970e2aebc671c459050ea477d3aee7, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C4
+    value: 
+    objectReference: {fileID: 11400000, guid: 7a92424db45302b4db2c916f1ff8aa36, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C5
+    value: 
+    objectReference: {fileID: 11400000, guid: b8715a514baa8dd40987080b37b4f82f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C6
+    value: 
+    objectReference: {fileID: 11400000, guid: 3f3b865b3699d2d47866d1cb9bc46a3b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C7
+    value: 
+    objectReference: {fileID: 11400000, guid: 121b13370c2472e48a558ca5141e18ec, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C8
+    value: 
+    objectReference: {fileID: 11400000, guid: e7ec05bfa3b1dba4e90186d88e0725f2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C9
+    value: 
+    objectReference: {fileID: 11400000, guid: a39b27bc9f31b9845bfc4fca26279f83, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C10
+    value: 
+    objectReference: {fileID: 11400000, guid: 42ddccb8fd511c34c97fac11be9f683f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C11
+    value: 
+    objectReference: {fileID: 11400000, guid: 5bb7195beaf24d0478cd299aab1c9137, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C12
+    value: 
+    objectReference: {fileID: 11400000, guid: 33f8b0bac8dbcca49ac1d3f5284db439, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C13
+    value: 
+    objectReference: {fileID: 11400000, guid: e0f6f6af9b8e54f4a878243b96c09712, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C14
+    value: 
+    objectReference: {fileID: 11400000, guid: 61c1b7333a12111428c31b73b7a01119, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C15
+    value: 
+    objectReference: {fileID: 11400000, guid: 08533e575043b39468293566161e252e, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C16
+    value: 
+    objectReference: {fileID: 11400000, guid: 28da658ccc8ae1e4ba08ed4a7a371e8e, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C17
+    value: 
+    objectReference: {fileID: 11400000, guid: 571bae474ce68f9418710a0326c0e013, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C18
+    value: 
+    objectReference: {fileID: 11400000, guid: ecb6b7606ea0d6f4f992c4a1c4cb7096, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C19
+    value: 
+    objectReference: {fileID: 11400000, guid: 4c125ae47cd972c48a9ce1838779b2c5, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C20
+    value: 
+    objectReference: {fileID: 11400000, guid: ba573b437f05d8f44bf293ad34ecf01f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C21
+    value: 
+    objectReference: {fileID: 11400000, guid: 60341edd588110a4d82060341a11df09, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C22
+    value: 
+    objectReference: {fileID: 11400000, guid: 6e2ecdfbc11b8af4ea3da84b6177403b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C23
+    value: 
+    objectReference: {fileID: 11400000, guid: 180bd48770b174e43b2d067c40b1e493, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C24
+    value: 
+    objectReference: {fileID: 11400000, guid: 5beb0303e53b2b04d8669e5f86b07c3e, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C25
+    value: 
+    objectReference: {fileID: 11400000, guid: b8ae355bf3d1baa4a810e63f9dab13ba, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C26
+    value: 
+    objectReference: {fileID: 11400000, guid: ef5b0585db707624aa3d7f1fa5a9467a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C27
+    value: 
+    objectReference: {fileID: 11400000, guid: fc14e02f35f71fa40a94e9478940eed2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C28
+    value: 
+    objectReference: {fileID: 11400000, guid: f4b985aa213036a49a5f7e4b868bc77a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C29
+    value: 
+    objectReference: {fileID: 11400000, guid: 6c6f4f860a1c23649b1ddf2192e7f1df, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C30
+    value: 
+    objectReference: {fileID: 11400000, guid: cac479249a138284b9d30b154f1394c6, type: 2}
+  - target: {fileID: 0}
+    propertyPath: wallTile_C31
+    value: 
+    objectReference: {fileID: 11400000, guid: 84e33ee0bff47274dbb3c273f1ebc7c5, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_1
+    value: 
+    objectReference: {fileID: 11400000, guid: fcbb46a59f7b7784a9e72ef0920f7060, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_2
+    value: 
+    objectReference: {fileID: 11400000, guid: 560cf61484b71bc45be5db48d4feac96, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_3
+    value: 
+    objectReference: {fileID: 11400000, guid: 100b3b2b0ae8e554192e9825164ebc3e, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_4
+    value: 
+    objectReference: {fileID: 11400000, guid: acdf44ceb4f96a44bbddb21b51e4eddd, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_5
+    value: 
+    objectReference: {fileID: 11400000, guid: a473d6ec178e912408b33ed11be2178b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_6
+    value: 
+    objectReference: {fileID: 11400000, guid: 5279f1b90543efe44b16ccdba284f1f2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_7
+    value: 
+    objectReference: {fileID: 11400000, guid: c0156955d4fd35f4cb53a104dcb5a7db, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_8
+    value: 
+    objectReference: {fileID: 11400000, guid: 26987a54f503d6f4384bca91641c8fb8, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_9
+    value: 
+    objectReference: {fileID: 11400000, guid: 705a51b892aeae4459987c1d67ee7a53, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_10
+    value: 
+    objectReference: {fileID: 11400000, guid: b69ec7edae919f442803aff76d4c0384, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_11
+    value: 
+    objectReference: {fileID: 11400000, guid: 162f7fdc73cd6434fb2de697a5bf9a71, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_12
+    value: 
+    objectReference: {fileID: 11400000, guid: dab885e939c69844ba523869dfb59238, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_13
+    value: 
+    objectReference: {fileID: 11400000, guid: c341c3b74e080324aa8380fa0b6c5f21, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_14
+    value: 
+    objectReference: {fileID: 11400000, guid: 7d8b061ab9de6be4b943516675018d19, type: 2}
+  - target: {fileID: 0}
+    propertyPath: patternWallTile_15
+    value: 
+    objectReference: {fileID: 11400000, guid: 68102f218c51373449bbff8cbc04a7c0, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_1
+    value: 
+    objectReference: {fileID: 11400000, guid: 9c3ef6ead83fb854e8413e7a0c9142cd, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_2
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_3
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_4
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_5
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_6
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_7
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_8
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_9
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_10
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_11
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_12
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_13
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_14
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: randomWallTile_15
+    value: 
+    objectReference: {fileID: 11400000, guid: 4a10ac59eb5917a48acb1a26865973cb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: createLevelSizedFloorCollider
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: createWall2DCompositeCollider
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: deleteFloorBelowOverlay
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: createWallGridCollider
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: levelColliderHeight
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: levelRot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: floorOffset
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallOffset
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: overlayOffset
+    value: 0.01
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: emptyOffset
+    value: 0
+    objectReference: {fileID: 0}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Swift Feather",
+    "description": "This feather enhances your agility, allowing you to move with incredible speed for a short duration."
+  },
+  {
+    "name": "Elixir of Shadows",
+    "description": "Grants temporary invisibility, making you unseen by enemies for a brief period."
+  },
+  {
+    "name": "Arcane Amulet",
+    "description": "Harness the power of arcane energy to temporarily boost your spellcasting abilities, increasing damage output."
+  },
+  {
+    "name": "Crystal Shard",
+    "description": "A throwable shard that shatters on impact, dealing damage to enemies in a small radius."
+  },
+  {
+    "name": "Vampiric Dagger",
+    "description": "Each successful strike with this dagger grants you a portion of health, stealing life from your foes."
+  },
+  {
+    "name": "Thunderstruck Boots",
+    "description": "Unleash a shockwave around you, stunning nearby enemies when activated."
+  },
+  {
+    "name": "Potion of Fortune",
+    "description": "Consume to significantly increase your chances of finding rare items for a limited time."
+  },
+  {
+    "name": "Phoenix Feather",
+    "description": "Upon death, the feather revives you with a portion of health, giving you a second chance."
+  },
+  {
+    "name": "Molten Shield",
+    "description": "Temporarily envelops you in a fiery shield, reflecting a portion of damage back to attackers."
+  },
+  {
+    "name": "Mirror Cloak",
+    "description": "Reflects projectiles back at enemies for a short duration, providing a temporary shield against ranged attacks."
+  },
+  {
+    "name": "Enchanted Map",
+    "description": "Reveals the layout of the entire floor, including the location of hidden rooms and treasures."
+  },
+  {
+    "name": "Cursed Skull",
+    "description": "Embrace the curse to gain increased power for a short time, but beware the consequences."
+  },
+  {
+    "name": "Celestial Orb",
+    "description": "Summons a temporary celestial ally to aid you in battle, attacking enemies and providing support."
+  },
+  {
+    "name": "Frostbite Rune",
+    "description": "Imbue your attacks with icy energy, slowing and chilling enemies with each strike."
+  },
+  {
+    "name": "Time Warp Hourglass",
+    "description": "Manipulate time, allowing you to rewind a short duration to undo mistakes or escape perilous situations."
+  }
+]
