@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Hertzole.ScriptableValues;
 
-[CreateAssetMenu(fileName = "PlayerSettings", menuName = "Player Settings")]
+/*[CreateAssetMenu(fileName = "PlayerSettings", menuName = "Player Settings")]
 public class PlayerSettings : ScriptableObject
 {
     //Camera Settings
@@ -18,4 +18,4 @@ public class PlayerSettings : ScriptableObject
     [Range(0f, 100f)] public ScriptableFloat ReduceDamageIntake;
     public ScriptableBool InfiniteStamina;
 
-}
+}*/
