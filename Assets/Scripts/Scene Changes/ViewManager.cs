@@ -13,6 +13,9 @@ public class ViewManager: MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(sceneName);
     }
+
+
+
     public void QuitGame()
     {
         Application.Quit();
