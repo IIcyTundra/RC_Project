@@ -1,3 +1,4 @@
+using Cinemachine;
 using Hertzole.ScriptableValues;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,27 +6,23 @@ using UnityEngine;
 
 public class CamControls : MonoBehaviour
 {
-    [SerializeField] private ScriptableFloat CamZoom;
-    [SerializeField] private ScriptableFloat CamFollowSpeed;
-    [SerializeField] private ScriptableFloat CamOffset;
-    [SerializeField] private ScriptableFloat CamShakeIntensity;
-    [SerializeField] private ScriptableFloat CamShakeMagnitude;
-    [SerializeField] private Transform target;
+    private CinemachineVirtualCamera virtualCam;
 
 
     private void Start()
     {
-        transform.position = target.position;
-    }
-    void Update()
-    {
-        if(target != null)
-            FollowTarget();
+         virtualCam = GetComponent<CinemachineVirtualCamera>();
+        GetPlayer();
+
     }
 
-    private void FollowTarget()
+    private void GetPlayer()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + CamOffset.Value, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, CamFollowSpeed.Value * Time.deltaTime);
+        if(GameObject.FindWithTag("Player"))
+        {
+            virtualCam.Follow = GameObject.FindWithTag("Player").transform;
+            return;
+        }
     }
+
 }
