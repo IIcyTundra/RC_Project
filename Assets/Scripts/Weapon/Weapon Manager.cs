@@ -1,3 +1,4 @@
+using Hertzole.ScriptableValues;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ public class WeaponManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform[] weapons;
+    [SerializeField] private ScriptableStringEvent onWeaponChanged;
 
     [Header("Keys")]
     [SerializeField] private KeyCode[] keys;
@@ -17,7 +19,7 @@ public class WeaponManager : MonoBehaviour
     private int selectedWeapon;
     private float timeSinceLastSwitch;
 
-    public Camera m_playerCam;
+    private Camera m_playerCam;
 
     
 
@@ -26,16 +28,22 @@ public class WeaponManager : MonoBehaviour
     {
         SetWeapons();
         Select(selectedWeapon);
-
+        m_playerCam = GameObject.FindWithTag("Camera").GetComponent<Camera>();
         timeSinceLastSwitch = 0f;
     }
 
     private void Update()
     {
+        int previousSelectedWeapon = selectedWeapon;
 
         SwapCurrentWeapon();
         WeaponAiming();
+        ScrollSelect();
 
+
+        if (previousSelectedWeapon != selectedWeapon) Select(selectedWeapon);
+
+        timeSinceLastSwitch += Time.deltaTime;
     }
 
     #region Weapon Controls
@@ -82,6 +90,28 @@ public class WeaponManager : MonoBehaviour
         if (keys == null) keys = new KeyCode[weapons.Length];
     }
 
+    private void ScrollSelect()
+    {
+        // Detect scroll input to change weapons
+        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0f)
+        {
+            if (selectedWeapon >= weapons.Length - 1)
+                selectedWeapon = 0;
+            else
+                selectedWeapon++;
+
+            Debug.Log($"{selectedWeapon}");
+        }
+        else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0f)
+        {
+            if (selectedWeapon <= 0)
+                selectedWeapon = weapons.Length - 1;
+            else
+                selectedWeapon--;
+            Debug.Log($"{selectedWeapon}");
+        }
+    }
+
     private void Select(int weaponIndex)
     {
         for (int i = 0; i < weapons.Length; i++)
@@ -94,5 +124,8 @@ public class WeaponManager : MonoBehaviour
 
     #endregion
 
-    private void OnWeaponSelected() { }
+    private void OnWeaponSelected() 
+    {
+        onWeaponChanged?.Invoke(this, weapons[selectedWeapon].name);
+    }
 }

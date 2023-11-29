@@ -25,10 +25,9 @@ public class WeaponData : ScriptableObject
     public FireMode fireMode = FireMode.Single;
     public int burstCount = 1;
     public float RateOfFire;
-    public int ProjectilesPerMag;
+    public float NumberOfBullets;
+    public float SpreadAngle;
     public int AmmoCapacity;
-    public float reloadTime = 0.3f;
-    public float WeaponRange;
     public AmmoType ammoType;
 
     [Header("Projectile")]

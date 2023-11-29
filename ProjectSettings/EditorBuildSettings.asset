@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings Menu.unity
     guid: 49badabb04fc87e40889f6b5dcff97f5
+  - enabled: 1
+    path: Assets/Scenes/BLAM.unity
+    guid: 09079efdf1d6cfd47af5b34daae9cd67
   m_configObjects:
     addressableimportsettingslist: {fileID: 11400000, guid: 027519ff6b1b05641b73517e46736c5b, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 0bb60f7bf8427d942bf5954afe59d809, type: 2}

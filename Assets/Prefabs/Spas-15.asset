@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1abc7b744ab9f6439a163566fb9e927, type: 3}
+  m_Name: Spas-15
+  m_EditorClassIdentifier: 
+  MuzzleVelocity: 10
+  fireMode: 0
+  burstCount: 3
+  RateOfFire: 10
+  NumberOfBullets: 3
+  SpreadAngle: 10
+  AmmoCapacity: 500
+  ammoType: 0
+  BulletPrefab: {fileID: 656511645294440768, guid: b9d5aace050dafa498bed73f021ec472, type: 3}
+  FlashPrefab: {fileID: 0}
+  ShootAudio:
+  - {fileID: 8300000, guid: 677246d9d87fdcc429c567fd6fb745ca, type: 3}
+  - {fileID: 8300000, guid: 594d405d04589e7469e5cfd69761ecec, type: 3}
+  - {fileID: 8300000, guid: 182b9935e76e7214c9d929a7e42ee525, type: 3}
+  EmptyMagAudio: {fileID: 0}
+  ReloadAudio: {fileID: 0}
+  kickMinMax: {x: 0.05, y: 0.2}
+  recoilAngleMinMax: {x: 3, y: 5}
+  recoilMoveSettleTime: 0.04
+  recoilRotationSettleTime: 0.1

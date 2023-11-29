@@ -64,7 +64,7 @@ public class PlayerInputEvents : ScriptableObject, PlayerInputSystem.IDefaultAct
         {
             SecondaryFirePressedEvent?.Invoke();
         }
-        else if (context.phase == InputActionPhase.Canceled)
+        else if (context.phase == InputActionPhase.Performed)
         {
             SecondaryFireReleasedEvent?.Invoke();
         }

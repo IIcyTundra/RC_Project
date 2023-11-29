@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1abc7b744ab9f6439a163566fb9e927, type: 3}
+  m_Name: Wendigo-D2
+  m_EditorClassIdentifier: 
+  MuzzleVelocity: 0
+  fireMode: 0
+  burstCount: 1
+  RateOfFire: 3
+  NumberOfBullets: 1
+  SpreadAngle: 0
+  AmmoCapacity: 200
+  ammoType: 1
+  BulletPrefab: {fileID: 656511645294440768, guid: b9d5aace050dafa498bed73f021ec472, type: 3}
+  FlashPrefab: {fileID: 0}
+  ShootAudio:
+  - {fileID: 8300000, guid: f0c1653ee2ef4ab48ba61ca6773197df, type: 3}
+  - {fileID: 8300000, guid: b5c6258ae9b88ba439391fd2df073bec, type: 3}
+  EmptyMagAudio: {fileID: 0}
+  ReloadAudio: {fileID: 0}
+  kickMinMax: {x: 0.05, y: 0.2}
+  recoilAngleMinMax: {x: 3, y: 5}
+  recoilMoveSettleTime: 0.1
+  recoilRotationSettleTime: 0.1

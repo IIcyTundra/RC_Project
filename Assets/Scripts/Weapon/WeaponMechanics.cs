@@ -13,12 +13,8 @@ public class WeaponMechanics : MonoBehaviour
 
     [SerializeField] private PlayerInputEvents m_PlayerInput;
 
+
     private float timeBetweenShots;
-
-    Vector3 recoilSmoothDampVelocity;
-    float recoilRotSmoothDampVelocity;
-    float recoilAngle;
-
 
     float nextShotTime;
     bool triggerReleasedSinceLastShot;
@@ -55,10 +51,10 @@ public class WeaponMechanics : MonoBehaviour
 
     private void Start()
     {
+        projectilesRemainingInMag = m_WeaponData.AmmoCapacity;
         currentAmmoTotal = m_WeaponData.AmmoCapacity;
         nextShotTime = Time.time;
         shotsRemainingInBurst = m_WeaponData.burstCount;
-        projectilesRemainingInMag = m_WeaponData.ProjectilesPerMag;
         source = GetComponentInParent<AudioSource>();
         timeBetweenShots = 1.0f / m_WeaponData.RateOfFire;
     }
@@ -72,7 +68,6 @@ public class WeaponMechanics : MonoBehaviour
             // Firemodes
             if (m_WeaponData.fireMode == FireMode.Burst)
             {
-
                 if (shotsRemainingInBurst == 0)
                 {
                     return;
@@ -87,10 +82,10 @@ public class WeaponMechanics : MonoBehaviour
 
             nextShotTime = Time.time + timeBetweenShots;
             // Spawn projectiles
-            SpawnProjectile();
+            CheckType();
 
 
-
+            CamControls.Instance.ShakeCamera(5f, .1f);
             int j = Random.Range(0, m_WeaponData.ShootAudio.Length);
             source.PlayOneShot(m_WeaponData.ShootAudio?[j]);
 
@@ -98,9 +93,40 @@ public class WeaponMechanics : MonoBehaviour
 
             onAmmoChanged.Invoke(this, $"{projectilesRemainingInMag} | {currentAmmoTotal}");
 
+            
 
         }
 
+    }
+
+    private void CheckType()
+    {
+        if (m_WeaponData.NumberOfBullets > 1)
+            FireSpreadShot();
+        else
+            SpawnProjectile();
+    }
+
+    private void FireSpreadShot()
+    {
+        float angleStep = m_WeaponData.SpreadAngle / (m_WeaponData.NumberOfBullets - 1);
+
+        for (int i = 0; i < m_WeaponData.NumberOfBullets; i++)
+        {
+            float angle = transform.eulerAngles.z - (m_WeaponData.SpreadAngle / 2) + (angleStep * i);
+            Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            foreach (Transform muzzle in WeaponMuzzles)
+            {
+                GameObject bullet = ObjectPools.Instance.GetPooledObject(m_WeaponData.BulletPrefab.name);
+                if (bullet.activeSelf != true)
+                {
+                    bullet.transform.SetPositionAndRotation(muzzle.position, rotation);
+
+                    bullet.SetActive(true);
+
+                }
+            }
+        }
     }
 
 
@@ -115,7 +141,6 @@ public class WeaponMechanics : MonoBehaviour
 
                 bullet.SetActive(true);
 
-                bullet.transform.forward = muzzle.forward;
             }
         }
     }
@@ -139,8 +164,9 @@ public class WeaponMechanics : MonoBehaviour
 
     public void OnTriggerHold()
     {
-        Shoot();
-        triggerReleasedSinceLastShot = false;
+            Shoot();
+            triggerReleasedSinceLastShot = false;
+        
     }
 
     public void OnTriggerReleased()

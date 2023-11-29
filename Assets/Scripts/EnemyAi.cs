@@ -11,6 +11,7 @@ public class EnemyAi : MonoBehaviour
 
     //States of Enemy
     public GameObject player;
+    public int health;
     public float speed;
     public float followRadius;
     public float attackRadius;
